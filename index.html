@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Righteous&display=swap');
+      
+        @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap');
+      </style>
+
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DrivenEats</title>
+    <link rel="stylesheet" href="./CSS/reset.css">
+    <link rel="stylesheet" href="./CSS/style.css">
+</head>
+<body>
+    <div class="boxTopo">
+        <h1>DrivenEats</h1>
+        <h2>Sua comida em 6 minutos</h2>
+    </div>
+    <div class="conteudoTotal">
+
+    <p class="tituloPrato">Primeiro, seu prato</p>
+
+    <div class="boxOpcoes1">
+        <div data-test ="dish" id="prato0" class="opcoesPrato" onclick="escolherPrato0()"><img src="./imagens/frango_yin_yang 1.svg" alt="">
+        <div class="textoDasOpcoesPrato">
+        <p data-test ="item-name" class="tituloDaOpcao">Frango Yin Yang</p>
+        <p class="descricaoDaOpcao">Um pouco de batata, um pouco de salada</p>
+        <div class="precoECheck">
+        <p data-test ="item-price" class="precoDaOpcao">R$ 14,90</p>
+        <img id="checkPrato0" class="check" src="./imagens/checkmark-circle 1.svg" alt="">
+        </div></div></div>
+
+        <div data-test ="dish" id="prato1" class="opcoesPrato" onclick="escolherPrato1()"><img src="./imagens/bife a parmegiana.png" alt="">
+            <div class="textoDasOpcoesPrato">
+            <p data-test ="item-name" class="tituloDaOpcao">Filé à Parmegiana</p>
+            <p class="descricaoDaOpcao">Bife à parmegiana, arroz e batata frita</p>
+            <div class="precoECheck">
+                <p data-test ="item-price" class="precoDaOpcao">R$ 17,90</p>
+                <img id="checkPrato1" class="check" src="./imagens/checkmark-circle 1.svg" alt="">
+                </div></div></div>
+            <div data-test ="dish" id="prato2" class="opcoesPrato" onclick="escolherPrato2()"><img src="./imagens/nhoque.png" alt="">
+                <div class="textoDasOpcoesPrato">
+                <p data-test ="item-name" class="tituloDaOpcao">Nhoque</p>
+                <p class="descricaoDaOpcao">Suculento nhoque de bolonhesa</p>
+                <div class="precoECheck">
+                    <p data-test ="item-price" class="precoDaOpcao">R$ 12,90</p>
+                    <img id="checkPrato2" class="check" src="./imagens/checkmark-circle 1.svg" alt="">
+                    </div></div></div>
+                
+                   
+    </div>
+
+    <p class="tituloBebida">Agora, sua bebida</p>
+    <div class="boxOpcoes2">
+        <div data-test ="drink" id="bebida0" class="opcoesBebida" onclick="escolherBebida0()"><img src="./imagens/coquinha_gelada 1.svg" alt="">
+        <div class="textoDasOpcoesBebida">
+        <p data-test ="item-name" class="tituloDaOpcao">Coquinha gelada</p>
+        <p class="descricaoDaOpcao">Lata 350ml</p>
+        <div class="precoECheck">
+            <p data-test ="item-price" class="precoDaOpcao">R$ 4,90</p>
+            <img id="checkBebida0" class="check" src="./imagens/checkmark-circle 1.svg" alt="">
+            </div></div></div>
+
+        <div data-test ="drink" id="bebida1" class="opcoesBebida" onclick="escolherBebida1()"><img src="./imagens/suco de laranja.png" alt="">
+            <div class="textoDasOpcoesBebida">
+            <p data-test ="item-name" class="tituloDaOpcao">Suco de Laranja</p>
+            <p class="descricaoDaOpcao">Copo 500ml</p>
+            <div class="precoECheck">
+                <p data-test ="item-price" class="precoDaOpcao">R$ 7,90</p>
+                <img id="checkBebida1" class="check" src="./imagens/checkmark-circle 1.svg" alt="">
+                </div></div></div>
+            <div data-test ="drink" id="bebida2" class="opcoesBebida" onclick="escolherBebida2()"><img src="./imagens/suco de morango.png" alt="">
+                <div class="textoDasOpcoesBebida">
+                <p data-test ="item-name" class="tituloDaOpcao">Suco de Morango</p>
+                <p class="descricaoDaOpcao">Copo 500ml</p>
+                <div class="precoECheck">
+                    <p data-test ="item-price" class="precoDaOpcao">R$ 9,90</p>
+                    <img id="checkBebida2" class="check" src="./imagens/checkmark-circle 1.svg" alt="">
+                    </div></div></div>
+              
+    </div>
+
+    <p class="tituloSobremesa">Por fim, sua sobremesa</p>
+    <div class="boxOpcoes2">
+        <div data-test ="dessert" id="sobremesa0" class="opcoesSobremesa" onclick="escolherSobremesa0()"><img src="./imagens/pudim 1.svg" alt="">
+        <div class="textoDasOpcoesSobremesa">
+        <p data-test ="item-name" class="tituloDaOpcao">Pudim</p>
+        <p class="descricaoDaOpcao">Apenas pudim</p>
+        <div class="precoECheck">
+            <p data-test ="item-price" class="precoDaOpcao">R$ 7,90</p>
+            <img id="checkSobremesa0" class="check" src="./imagens/checkmark-circle 1.svg" alt="">
+            </div></div></div>
+
+        <div data-test ="dessert" id="sobremesa1" class="opcoesSobremesa" onclick="escolherSobremesa1()"><img src="./imagens/sorvetin.png" alt="">
+            <div class="textoDasOpcoesSobremesa1">
+            <p data-test ="item-name" class="tituloDaOpcao">Sorvete</p>
+            <p class="descricaoDaOpcao">Sorvete de Chocolate</p>
+            <div class="precoECheck">
+                <p data-test ="item-price" class="precoDaOpcao">R$ 8,90</p>
+                <img id="checkSobremesa1" class="check" src="./imagens/checkmark-circle 1.svg" alt="">
+                </div></div></div>
+    
+            <div data-test ="dessert" id="sobremesa2" class="opcoesSobremesa" onclick="escolherSobremesa2()"><img src="./imagens/torta.png" alt="">
+                <div class="textoDasOpcoesSobremesa">
+                <p data-test ="item-name" class="tituloDaOpcao">Torta</p>
+                <p class="descricaoDaOpcao">Torta de Limão</p>
+                <div class="precoECheck">
+                    <p data-test ="item-price" class="precoDaOpcao">R$ 6,90</p>
+                    <img id="checkSobremesa2" class="check" src="./imagens/checkmark-circle 1.svg" alt="">
+                    </div></div></div>
+        
+                
+                
+    </div>
+    </div>
+
+    <div  class="boxFinalizacao">
+        <div data-test ="order-btn" id="botaoFinal" class="botaoAntesDeFinalizar"  >Selecione os 3 itens <br> para fechar o pedido</div>
+    </div>
+ 
+        
+    </div>
+
+
+
+
+
+
+
+    <script>
+        let escolheuPrato;
+        let escolheuBebida;
+        let escolheuSobremesa;
+        let finalizou;
+        let = pratoEscolhido;
+        let = bebidaEscolhida;
+        let = sobremesaEscolhida;
+        let = precoPrato;
+        let = precoBebida;
+        let = precoSobremesa;
+      
+
+        
+        
+
+
+        function escolherPrato0(){
+            document.getElementById("prato0").style.borderColor = "green";
+            document.getElementById("checkPrato0").style.display = "inline";
+            document.getElementById("prato1").style.borderColor = "white";
+            document.getElementById("checkPrato1").style.display = "none";
+            document.getElementById("prato2").style.borderColor = "white";
+            document.getElementById("checkPrato2").style.display = "none";
+            precoPrato = 14.90
+            pratoEscolhido = "Frango Yin Yang"
+            escolheuPrato = 1;
+            analisaSeFinalizou();
+        }
+
+        function escolherPrato1(){
+            document.getElementById("prato0").style.borderColor = "white";
+            document.getElementById("checkPrato0").style.display = "none";
+            document.getElementById("prato1").style.borderColor = "green";
+            document.getElementById("checkPrato1").style.display = "inline";
+            document.getElementById("prato2").style.borderColor = "white";
+            document.getElementById("checkPrato2").style.display = "none";
+            precoPrato = 17.90
+            pratoEscolhido = "Filé à Parmegiana"
+            escolheuPrato = 1;
+            analisaSeFinalizou();
+        }
+
+        function escolherPrato2(){
+            document.getElementById("prato0").style.borderColor = "white";
+            document.getElementById("checkPrato0").style.display = "none";
+            document.getElementById("prato1").style.borderColor = "white";
+            document.getElementById("checkPrato1").style.display = "none";
+            document.getElementById("prato2").style.borderColor = "green";
+            document.getElementById("checkPrato2").style.display = "inline";
+            precoPrato = 12.90
+            pratoEscolhido = "Nhoque"
+            escolheuPrato = 1;
+            analisaSeFinalizou();
+        }
+
+
+
+
+
+
+        function escolherBebida0(){
+            document.getElementById("bebida0").style.borderColor = "green";
+            document.getElementById("checkBebida0").style.display = "inline";
+            document.getElementById("bebida1").style.borderColor = "white";
+            document.getElementById("checkBebida1").style.display = "none";
+            document.getElementById("bebida2").style.borderColor = "white";
+            document.getElementById("checkBebida2").style.display = "none";
+            precoBebida = 4.90
+            bebidaEscolhida = "Coca-Cola Lata"
+            escolheuBebida = 1;
+            analisaSeFinalizou();
+        }
+        function escolherBebida1(){
+            document.getElementById("bebida0").style.borderColor = "white";
+            document.getElementById("checkBebida0").style.display = "none";
+            document.getElementById("bebida1").style.borderColor = "green";
+            document.getElementById("checkBebida1").style.display = "inline";
+            document.getElementById("bebida2").style.borderColor = "white";
+            document.getElementById("checkBebida2").style.display = "none";
+            precoBebida = 7.90
+            bebidaEscolhida = "Suco de Laranja"
+            escolheuBebida = 1;
+            analisaSeFinalizou();
+        }
+        function escolherBebida2(){
+            document.getElementById("bebida0").style.borderColor = "white";
+            document.getElementById("checkBebida0").style.display = "none";
+            document.getElementById("bebida1").style.borderColor = "white";
+            document.getElementById("checkBebida1").style.display = "none";
+            document.getElementById("bebida2").style.borderColor = "green";
+            document.getElementById("checkBebida2").style.display = "inline";
+            precoBebida = 9.90
+            bebidaEscolhida = "Suco de Morango"
+            escolheuBebida = 1;
+            analisaSeFinalizou();
+        }
+
+
+
+
+
+
+
+
+        function escolherSobremesa0(){
+            document.getElementById("sobremesa0").style.borderColor = "green";
+            document.getElementById("checkSobremesa0").style.display = "inline";
+            document.getElementById("sobremesa1").style.borderColor = "white";
+            document.getElementById("checkSobremesa1").style.display = "none";
+            document.getElementById("sobremesa2").style.borderColor = "white";
+            document.getElementById("checkSobremesa2").style.display = "none";
+            precoSobremesa = 7.90
+            sobremesaEscolhida = "Pudim"
+            escolheuSobremesa = 1;
+            analisaSeFinalizou();
+        }
+        function escolherSobremesa1(){
+            document.getElementById("sobremesa0").style.borderColor = "white";
+            document.getElementById("checkSobremesa0").style.display = "none";
+            document.getElementById("sobremesa1").style.borderColor = "green";
+            document.getElementById("checkSobremesa1").style.display = "inline";
+            document.getElementById("sobremesa2").style.borderColor = "white";
+            document.getElementById("checkSobremesa2").style.display = "none";
+            precoSobremesa = 8.90
+            sobremesaEscolhida = "Sorvete de Chocolate"
+            escolheuSobremesa = 1;
+            analisaSeFinalizou();
+        }
+        function escolherSobremesa2(){
+            document.getElementById("sobremesa0").style.borderColor = "white";
+            document.getElementById("checkSobremesa0").style.display = "none";
+            document.getElementById("sobremesa1").style.borderColor = "white";
+            document.getElementById("checkSobremesa1").style.display = "none";
+            document.getElementById("sobremesa2").style.borderColor = "green";
+            document.getElementById("checkSobremesa2").style.display = "inline";
+            precoSobremesa = 6.90
+            sobremesaEscolhida = "Torta de Limão"
+            escolheuSobremesa = 1;
+            analisaSeFinalizou();
+        }
+
+        function analisaSeFinalizou(){
+
+        if((escolheuPrato == 1) && (escolheuBebida == 1) && (escolheuSobremesa == 1)){
+            document.getElementById("botaoFinal").innerHTML = "Fechar Pedido";
+            document.getElementById("botaoFinal").style.backgroundColor = "green";
+            finalizou = 1;
+        }
+    }
+         
+
+
+
+    </script>
+
+</body>
+</html>
