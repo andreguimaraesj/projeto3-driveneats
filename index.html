@@ -23,7 +23,7 @@
 
     <p class="tituloPrato">Primeiro, seu prato</p>
 
-    <div class="boxOpcoes1">
+    <div class="boxOpcoes">
         <div data-test ="dish" id="prato0" class="opcoesPrato" onclick="escolherPrato0()"><img src="./imagens/frango_yin_yang 1.svg" alt="">
         <div class="textoDasOpcoesPrato">
         <p data-test ="item-name" class="tituloDaOpcao">Frango Yin Yang</p>
@@ -54,7 +54,7 @@
     </div>
 
     <p class="tituloBebida">Agora, sua bebida</p>
-    <div class="boxOpcoes2">
+    <div class="boxOpcoes">
         <div data-test ="drink" id="bebida0" class="opcoesBebida" onclick="escolherBebida0()"><img src="./imagens/coquinha_gelada 1.svg" alt="">
         <div class="textoDasOpcoesBebida">
         <p data-test ="item-name" class="tituloDaOpcao">Coquinha gelada</p>
@@ -84,7 +84,7 @@
     </div>
 
     <p class="tituloSobremesa">Por fim, sua sobremesa</p>
-    <div class="boxOpcoes2">
+    <div class="boxOpcoes">
         <div data-test ="dessert" id="sobremesa0" class="opcoesSobremesa" onclick="escolherSobremesa0()"><img src="./imagens/pudim 1.svg" alt="">
         <div class="textoDasOpcoesSobremesa">
         <p data-test ="item-name" class="tituloDaOpcao">Pudim</p>
@@ -118,7 +118,7 @@
     </div>
 
     <div  class="boxFinalizacao">
-        <div data-test ="order-btn" id="botaoFinal" class="botaoAntesDeFinalizar"  >Selecione os 3 itens <br> para fechar o pedido</div>
+        <div data-test ="order-btn" id="botaoFinal" class="botaoAntesDeFinalizar" onclick="enviarPedido()" >Selecione os 3 itens <br> para fechar o pedido</div>
     </div>
  
         
@@ -135,12 +135,16 @@
         let escolheuBebida;
         let escolheuSobremesa;
         let finalizou;
-        let = pratoEscolhido;
-        let = bebidaEscolhida;
-        let = sobremesaEscolhida;
-        let = precoPrato;
-        let = precoBebida;
-        let = precoSobremesa;
+        let pratoEscolhido;
+        let bebidaEscolhida;
+        let sobremesaEscolhida;
+        let precoPrato;
+        let precoBebida;
+        let precoSobremesa;
+        let total;
+        let stringPedido;
+        let stringURI;
+        let stringLink;
       
 
         
@@ -231,9 +235,7 @@
 
 
 
-
-
-
+ 
 
         function escolherSobremesa0(){
             document.getElementById("sobremesa0").style.borderColor = "green";
@@ -280,7 +282,20 @@
             finalizou = 1;
         }
     }
-         
+        
+        function enviarPedido(){
+            if (finalizou == 1){
+
+                total  = precoPrato + precoBebida + precoSobremesa
+                stringPedido = "Olá, gostaria de fazer o pedido: \n - Prato: "+pratoEscolhido+"\n - Bebida: "+bebidaEscolhida+"\n - Sobremesa: "+sobremesaEscolhida+"\n Total: R$ "+total.toFixed(2);
+                stringURI = encodeURIComponent(stringPedido);
+                stringLink = "https://wa.me/5516991950462?text="+stringURI
+                window.open(stringLink);
+
+
+
+            }
+        }
 
 
 

@@ -58,18 +58,7 @@ h2{
     margin-bottom: 17px;
     color: #333333;
 }
-.boxOpcoes1{
-    height: 216px;
-    max-width: 414px;
-    display: flex;
-    justify-content: flex-start;
-    overflow-y: hidden;
-    overflow-x: scroll; 
-    box-sizing: border-box;
-}
-
-.boxOpcoes2{
-    
+.boxOpcoes{
     height: 216px;
     max-width: 414px;
     display: flex;
